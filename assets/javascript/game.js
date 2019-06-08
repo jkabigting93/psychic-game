@@ -38,9 +38,12 @@ if (letters.indexOf(userGuess) > -1) {
     }
 }   
 
+// Record Guesses - could probably still find a way to make previously-guessed letters not be recorded again
+var newGuess = document.createTextNode(userGuess);
+guessesSoFarStat.appendChild(newGuess);
+
 // Rewrite Stats
 document.getElementById("winsStat").innerHTML = "" + wins;
 document.getElementById("lossesStat").innerHTML = "" + losses;
 document.getElementById("guessesLeftStat").innerHTML = "" + numGuesses;
-document.getElementById("guessesSoFarStat").innerHTML = "" + userGuess;
 }
